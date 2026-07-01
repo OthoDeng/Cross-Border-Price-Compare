@@ -92,10 +92,10 @@ pip install requests
 在 Claude Code / Cherry Studio 中：
 
 ```
-/find-skills "walmart price compare"
+/find-skills "price compare"
 ```
 
-找到 `Walmart Cross-Border Price Compare` 并安装。
+找到 `Cross-Border Price Compare` 并安装。
 
 ### 方式二：手动安装
 
@@ -103,10 +103,10 @@ pip install requests
 
 ```bash
 # Claude Code
-cp -r walmart-price-compare/ ~/.claude/skills/walmart-price-compare/
+cp -r walmart-price-compare/ ~/.claude/skills/price-compare/
 
 # Cherry Studio
-cp -r walmart-price-compare/ "<CherryStudio Data>/Skills/walmart-price-compare/"
+cp -r walmart-price-compare/ "<CherryStudio Data>/Skills/price-compare/"
 ```
 
 2. 安装依赖 Skill —— **海纳购物管家**：
@@ -211,23 +211,6 @@ Skill 会自动触发，执行搜索并输出对比报告。
 9. 本 Skill 运行在 AI Agent 环境中，每次查询依赖 LLM 理解和执行技能指令。搜索结果质量受搜索引擎和 LLM 能力双重影响。
 
 10. 刀具等特殊物品请注意航空托运规定，不能随身携带。
-
----
-
-## 项目结构
-
-```
-walmart-price-compare/
-├── README.md           # 本文件
-└── SKILL.md            # Skill 定义文件（AI Agent 执行指令）
-
-Haina-Shopping-Assistant/   # 依赖 Skill
-├── SKILL.md
-└── scripts/
-    ├── search_work_main.py         # 搜索入口
-    ├── content_search_v2_api.py    # 内容搜索 API
-    └── product_search_pro_api.py   # 商品搜索 API
-```
 
 ---
 
